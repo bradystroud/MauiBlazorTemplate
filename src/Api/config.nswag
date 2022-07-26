@@ -146,7 +146,7 @@
       "enumNameGeneratorType": null,
       "serviceHost": null,
       "serviceSchemes": null,
-      "output": "../SharedUI/ApiClient.cs",
+      "output": "../SharedUI/Services/ApiClient.cs",
       "newLineBehavior": "Auto"
     }
   }

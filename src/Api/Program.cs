@@ -12,6 +12,7 @@ builder.Services.AddOpenApiDocument(configure =>
 
 var app = builder.Build();
 
+app.UseCors("*"); //TODO: This isn't working yet - still CORSing problems 🙃
 app.UseSwaggerUi3(settings =>
     settings.DocumentPath = "/api/v1/specification.json");
 
