@@ -19,9 +19,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Update="specification.json">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	  </Content>
 	  <Content Update="wwwroot\api\v1\specification.json">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	  </Content>

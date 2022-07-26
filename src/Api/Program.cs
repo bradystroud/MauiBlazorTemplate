@@ -12,13 +12,10 @@ builder.Services.AddOpenApiDocument(configure =>
 
 var app = builder.Build();
 
+app.UseSwaggerUi3(settings =>
+    settings.DocumentPath = "/api/v1/specification.json");
+
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    //app.UseSwaggerUi3(settings =>
-    //   settings.DocumentPath = "/api/v1/specification.json"); //TODO: This isn't working :(
-    app.UseSwaggerUi();
-}
 
 app.UseHttpsRedirection();
 
