@@ -1,6 +1,5 @@
 ﻿@page "/"
 @using SharedUI.Interfaces
-@using SharedUI.Shared
 @inject IPlatformService PlatformService
 
 <PageTitle>Index</PageTitle>
@@ -14,5 +13,5 @@ Welcome to your new app.
 Running on @Platform
 
 @code {
-    public string Platform => PlatformService.GetPlatformName();
+    private string Platform => PlatformService.GetPlatformName();
 }

@@ -26,4 +26,10 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Pages\FetchData.cs">
+      <DependentUpon>FetchData.razor</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
 </Project>
