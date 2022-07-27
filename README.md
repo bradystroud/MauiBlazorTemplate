@@ -1,5 +1,6 @@
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
-[![CodeQL](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml)
+
+<!-- [![CodeQL](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml) TODO: This is broken because of MAUI requiring previews of .NET-->
 
 # Maui+Blazor Solution Template
 Template for MAUI Blazor Applications.
