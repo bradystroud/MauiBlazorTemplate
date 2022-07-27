@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using MobileUI.Data;
 using MobileUI.Services;
 using UI.Shared.Interfaces;
 using UI.Shared.Services;
