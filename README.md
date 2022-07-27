@@ -1,6 +1,5 @@
-<a href="https://gitmoji.dev">
-  <img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
-</a>
+[![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
+[![CodeQL](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/codeql-analysis.yml)
 
 # Maui+Blazor Solution Template
 Template for MAUI Blazor Applications.
