@@ -50,7 +50,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SharedUI\SharedUI.csproj" />
+      <ProjectReference Include="..\UI.Shared\UI.Shared.csproj" />
     </ItemGroup>
 
 </Project>

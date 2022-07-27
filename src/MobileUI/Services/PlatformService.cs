@@ -1,4 +1,4 @@
-﻿using SharedUI.Interfaces;
+﻿using UI.Shared.Interfaces;
 
 namespace MobileUI.Services;
 public class PlatformService : IPlatformService

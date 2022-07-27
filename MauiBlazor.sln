@@ -2,15 +2,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "src\Api\Api.csproj", "{CBC01440-3108-4720-ACEF-87FD499EE0A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "src\WebApi\WebApi.csproj", "{CBC01440-3108-4720-ACEF-87FD499EE0A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp", "src\BlazorApp\BlazorApp.csproj", "{138814C8-62AD-4F24-BE38-1A4985F986E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "src\WebUI\WebUI.csproj", "{138814C8-62AD-4F24-BE38-1A4985F986E1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileUI", "src\MobileUI\MobileUI.csproj", "{A4D3F6E7-A33B-4F6E-8878-A403E7632D76}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Shared\Shared.csproj", "{5062E69C-8651-4582-81BD-D26E3BCE2430}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedUI", "src\SharedUI\SharedUI.csproj", "{02C19FF0-2690-4447-98E9-CC458E84F12F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.Shared", "src\UI.Shared\UI.Shared.csproj", "{02C19FF0-2690-4447-98E9-CC458E84F12F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C8A02A31-3D82-4294-AEE5-F4727411890D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,5 +48,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{02C19FF0-2690-4447-98E9-CC458E84F12F} = {C8A02A31-3D82-4294-AEE5-F4727411890D}
+		{A4D3F6E7-A33B-4F6E-8878-A403E7632D76} = {C8A02A31-3D82-4294-AEE5-F4727411890D}
+		{138814C8-62AD-4F24-BE38-1A4985F986E1} = {C8A02A31-3D82-4294-AEE5-F4727411890D}
 	EndGlobalSection
 EndGlobal
