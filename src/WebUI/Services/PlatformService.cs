@@ -1,6 +1,6 @@
-﻿using SharedUI.Interfaces;
+﻿using UI.Shared.Interfaces;
 
-namespace BlazorApp.Services
+namespace WebUI.Services
 {
     public class PlatformService : IPlatformService
     {

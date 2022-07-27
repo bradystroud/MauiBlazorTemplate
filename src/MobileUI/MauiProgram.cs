@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components.WebView.Maui;
 using MobileUI.Data;
 using MobileUI.Services;
-using SharedUI.Interfaces;
+using UI.Shared.Interfaces;
+using UI.Shared.Services;
 
 namespace MobileUI
 {
@@ -21,8 +22,9 @@ namespace MobileUI
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
+            var httpClient = new HttpClient();
 
-            builder.Services.AddSingleton<WeatherForecastService>();
+            builder.Services.AddScoped<IWeatherForecastClient>(_ => new WeatherForecastClient("https://localhost:7136", httpClient));
             builder.Services.AddScoped<IPlatformService, PlatformService>();
 
 

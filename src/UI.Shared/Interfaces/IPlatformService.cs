@@ -1,4 +1,4 @@
-﻿namespace SharedUI.Interfaces;
+﻿namespace UI.Shared.Interfaces;
 
 public interface IPlatformService
 {

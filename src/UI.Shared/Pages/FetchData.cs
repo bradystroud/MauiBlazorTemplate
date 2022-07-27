@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Shared;
-using SharedUI.Services;
+using UI.Shared.Services;
 
-namespace SharedUI.Pages;
+namespace UI.Shared.Pages;
 
 public partial class FetchData
 {
