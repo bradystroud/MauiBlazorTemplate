@@ -109,7 +109,7 @@
       "wrapResponseMethods": [],
       "generateResponseClasses": true,
       "responseClass": "SwaggerResponse",
-      "namespace": "UI.Core.Services",
+      "namespace": "MauiBlazor.UI.Core.Services",
       "requiredPropertiesMustBeDefined": true,
       "dateType": "System.DateTimeOffset",
       "jsonConverters": null,
