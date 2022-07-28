@@ -1,9 +1,9 @@
+using MauiBlazor.UI.Core.Interfaces;
+using MauiBlazor.UI.Core.Services;
 using MauiBlazor.UI.Web;
 using MauiBlazor.UI.Web.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using MauiBlazor.UI.Core.Interfaces;
-using MauiBlazor.UI.Core.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");

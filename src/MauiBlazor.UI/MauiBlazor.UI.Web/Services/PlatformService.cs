@@ -1,9 +1,8 @@
 ﻿using MauiBlazor.UI.Core.Interfaces;
 
-namespace MauiBlazor.UI.Web.Services
+namespace MauiBlazor.UI.Web.Services;
+
+public class PlatformService : IPlatformService
 {
-    public class PlatformService : IPlatformService
-    {
-        public string GetPlatformName() => "Web";
-    }
+    public string GetPlatformName() => "Web";
 }

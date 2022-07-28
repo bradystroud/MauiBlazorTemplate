@@ -1,12 +1,11 @@
-﻿namespace MauiBlazor.UI.Mobile
-{
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
+﻿namespace MauiBlazor.UI.Mobile;
 
-            MainPage = new MainPage();
-        }
+public partial class App : Application
+{
+    public App()
+    {
+        InitializeComponent();
+
+        MainPage = new MainPage();
     }
 }

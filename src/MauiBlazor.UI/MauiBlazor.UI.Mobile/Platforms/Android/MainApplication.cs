@@ -1,16 +1,15 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MauiBlazor.UI.Mobile
-{
-    [Application]
-    public class MainApplication : MauiApplication
-    {
-        public MainApplication(IntPtr handle, JniHandleOwnership ownership)
-            : base(handle, ownership)
-        {
-        }
+namespace MauiBlazor.UI.Mobile;
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+[Application]
+public class MainApplication : MauiApplication
+{
+    public MainApplication(IntPtr handle, JniHandleOwnership ownership)
+        : base(handle, ownership)
+    {
     }
+
+    protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
 }
