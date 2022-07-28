@@ -1,0 +1,17 @@
+using MauiBlazor.UI.Web;
+using MauiBlazor.UI.Web.Services;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MauiBlazor.UI.Core.Interfaces;
+using MauiBlazor.UI.Core.Services;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+var httpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
+builder.Services.AddScoped(_ => httpClient);
+builder.Services.AddScoped<IPlatformService, PlatformService>();
+builder.Services.AddScoped<IWeatherForecastClient>(_ => new WeatherForecastClient("https://localhost:7136", httpClient));
+
+await builder.Build().RunAsync();

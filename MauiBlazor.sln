@@ -2,17 +2,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "src\WebApi\WebApi.csproj", "{CBC01440-3108-4720-ACEF-87FD499EE0A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "src\MauiBlazor.WebApi\MauiBlazor.WebApi.csproj", "{CBC01440-3108-4720-ACEF-87FD499EE0A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebUI", "src\WebUI\WebUI.csproj", "{138814C8-62AD-4F24-BE38-1A4985F986E1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MauiBlazor.UI", "MauiBlazor.UI", "{C8A02A31-3D82-4294-AEE5-F4727411890D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobileUI", "src\MobileUI\MobileUI.csproj", "{A4D3F6E7-A33B-4F6E-8878-A403E7632D76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.UI.Core", "src\MauiBlazor.UI\MauiBlazor.UI.Core\MauiBlazor.UI.Core.csproj", "{02C19FF0-2690-4447-98E9-CC458E84F12F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "src\Shared\Shared.csproj", "{5062E69C-8651-4582-81BD-D26E3BCE2430}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.UI.Web", "src\MauiBlazor.UI\MauiBlazor.UI.Web\MauiBlazor.UI.Web.csproj", "{138814C8-62AD-4F24-BE38-1A4985F986E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI.Shared", "src\UI.Shared\UI.Shared.csproj", "{02C19FF0-2690-4447-98E9-CC458E84F12F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.UI.Mobile", "src\MauiBlazor.UI\MauiBlazor.UI.Mobile\MauiBlazor.UI.Mobile.csproj", "{A4D3F6E7-A33B-4F6E-8878-A403E7632D76}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C8A02A31-3D82-4294-AEE5-F4727411890D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.Shared", "src\MauiBlazor.Shared\MauiBlazor.Shared.csproj", "{5062E69C-8651-4582-81BD-D26E3BCE2430}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
