@@ -18,6 +18,4 @@ I will continue to build and improve this template, so your feedback would be ap
   ┣ 📂 MauiBlazor.WebApi
 ```
 
-UI code only needs to be written once - in the MauiBlazor.UI.Core project.
-The Web and Mobile projects use this code.
-MauiBlazor.Shared contains shared code used by the UI and WebApi projects. 
+Check out the blog where I dive a vit deeper into the purpose of each project https://medium.com/@bradystroud/maui-blazor-template-84cb6b8db97
