@@ -4,7 +4,7 @@
 Template for MAUI Blazor Applications.
 
 Contains the basic solution structure needed to build an app that can run on the web, mobile and desktop.
-I will continue to build and improve this template, so your feedback would be appreciated 😊
+I will continue to build and improve this template, so feedback welcome 😊
 
 ## 🏛 Solution structure
 ```
@@ -18,4 +18,8 @@ I will continue to build and improve this template, so your feedback would be ap
   ┣ 📂 MauiBlazor.WebApi
 ```
 
-Check out the blog where I dive a vit deeper into the purpose of each project https://medium.com/@bradystroud/maui-blazor-template-84cb6b8db97
+Currently there is no template to automatically kick you off and have a single UI that can be used on a website and a MAUI app.
+I hope to save developers a ton of work.
+Check out my blog where I dive a bit deeper into the purpose of each project https://medium.com/@bradystroud/maui-blazor-template-84cb6b8db97
+
+Brady
