@@ -11,9 +11,6 @@ jobs:
   build:
     name: Build
     runs-on: windows-latest
-    strategy:
-      matrix:
-        configuration: ['Debug', 'Release']
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
