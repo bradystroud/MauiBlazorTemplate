@@ -11,6 +11,9 @@ jobs:
   build:
     name: Build
     runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
