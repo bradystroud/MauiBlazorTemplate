@@ -1,29 +1,32 @@
 name: Build MAUI app
 
 on:
+  workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [main]
   pull_request:
-    branches: [ "main" ]
+    branches: [main]
 
-jobs:
+jobs: 
   build:
-
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
+    name: Build
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: ['Debug', 'Release']
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 6.0.x
-    - name: Restore MAUI workloads
+        dotnet-version: 6.x
+    - name: Install workload
       run: dotnet workload restore
-    - name: Restore dependencies
-      run: dotnet restore
+    - name: Setup Java SDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: 17
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build  
     - name: Test
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test
