@@ -18,8 +18,8 @@ I will continue to build and improve this template, so feedback welcome 😊
   ┣ 📂 MauiBlazor.WebApi
 ```
 
-Currently there is no template to automatically kick you off and have a single UI that can be used on a website and a MAUI app.
-I hope to save developers a ton of work.
+Currently there is no template to automatically kick you off and have a single UI that can be used on a website and a MAUI app.  
+I hope to save developers a ton of work.  
 Check out my blog where I dive a bit deeper into the purpose of each project https://medium.com/@bradystroud/maui-blazor-template-84cb6b8db97
 
 Brady
