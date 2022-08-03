@@ -10,15 +10,15 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Web/
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
         dotnet-version: 6.0.x
-    - name: Restore workloads
-      run: dotnet workload restore
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
