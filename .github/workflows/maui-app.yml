@@ -142,4 +142,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-macos-ci-build
-          path: /\Release\net6.0-maccatalyst/maccatalyst-x64/publish/
+          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/
