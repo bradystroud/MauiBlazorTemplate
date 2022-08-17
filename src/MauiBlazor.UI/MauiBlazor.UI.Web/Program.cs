@@ -12,6 +12,6 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 var httpClient = new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) };
 builder.Services.AddScoped(_ => httpClient);
 builder.Services.AddScoped<IPlatformService, PlatformService>();
-builder.Services.AddScoped<IWeatherForecastClient>(_ => new WeatherForecastClient("https://localhost:7136", httpClient));
+builder.Services.AddScoped<IWeatherForecastClient>(_ => new WeatherForecastClient(builder.Configuration["ApiUrl"], httpClient));
 
 await builder.Build().RunAsync();
