@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
           name: mauiblazor-android-ci-build
-          path: /
+          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
 # To test what we are working with
 
 # MAUI Windows Build
@@ -77,7 +77,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-windows-ci-build
-          path: /
+          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
           # path: /bin/Release/net6.0-windows10.0.19041.0/win10-x64/AppPackages/MauiBlazor.UI.Mobile*/MauiBlazor.UI.Mobile*.msix
 
 # MAUI iOS Build
@@ -110,7 +110,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-ios-ci-build
-          path: /
+          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
           # path: /bin/Release/net6.0-ios/iossimulator-x64/*.app
 
 # MAUI MacCatalyst Build
@@ -143,5 +143,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-macos-ci-build
-          path: /
+          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
           # path: /bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/
