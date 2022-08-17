@@ -1,29 +1,143 @@
-name: Build MAUI app
+name: Build - MAUI apps
 
 on:
   pull_request:
-    branches: [main]
+    branches: [ master ]
+  workflow_dispatch:
 
-jobs: 
-  build:
-    name: Build
+permissions:
+  contents: read
+
+env:
+  DOTNET_NOLOGO: true                     # Disable the .NET logo
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true # Disable the .NET first time experience
+  DOTNET_CLI_TELEMETRY_OPTOUT: true       # Disable sending .NET CLI telemetry
+
+jobs:
+# MAUI Android Build
+  build-android:
     runs-on: windows-latest
     defaults:
       run:
         working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
+    name: Android Build
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 6.x
-    - name: Install workload
-      run: dotnet workload restore
-    - name: Setup Java SDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: 17
-    - name: Build
-      run: dotnet build  
-    - name: Test
-      run: dotnet test
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+          
+      - name: Install MAUI Workload
+        run: dotnet workload install maui --ignore-failed-sources
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build MAUI Android
+        run: dotnet publish -c Release -f net6.0-android --no-restore
+
+      - name: Upload Android Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: mauiblazor-android-ci-build
+          path: /bin/Release/net6.0-android/*Signed.a*
+
+# MAUI Windows Build
+  build-windows:
+    runs-on: windows-2022
+    defaults:
+      run:
+        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
+    name: Windows Build
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Install MAUI Workload
+        run: dotnet workload install maui --ignore-failed-sources
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build MAUI Windows
+        run: dotnet publish -c Release -f net6.0-windows10.0.19041.0 --no-restore
+
+      - name: Upload Windows Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mauiblazor-windows-ci-build
+          path: /bin/Release/net6.0-windows10.0.19041.0/win10-x64/AppPackages/MauiBlazor.UI.Mobile*/MauiBlazor.UI.Mobile*.msix
+
+# MAUI iOS Build
+  build-ios:
+    runs-on: macos-12
+    name: iOS Build
+    defaults:
+      run:
+        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Install MAUI Workload
+        run: dotnet workload install maui --ignore-failed-sources
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build MAUI iOS
+        run: dotnet build -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
+
+      - name: Upload iOS Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mauiblazor-ios-ci-build
+          path: /bin/Release/net6.0-ios/iossimulator-x64/**/*.app
+
+# MAUI MacCatalyst Build
+  build-mac:
+    runs-on: macos-12
+    name: MacCatalyst Build
+    defaults:
+      run:
+        working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
+    steps:
+    
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 6.0.x
+
+      - name: Install MAUI Workload
+        run: dotnet workload install maui --ignore-failed-sources
+
+      - name: Restore Dependencies
+        run: dotnet restore
+
+      - name: Build MAUI MacCatalyst
+        run: dotnet publish -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
+
+      - name: Upload MacCatalyst Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: mauiblazor-macos-ci-build
+          path: /bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/*.pkg
