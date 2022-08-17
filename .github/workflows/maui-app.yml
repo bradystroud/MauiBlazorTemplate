@@ -2,7 +2,7 @@ name: Build - MAUI apps
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
