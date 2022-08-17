@@ -78,7 +78,6 @@ jobs:
         with:
           name: mauiblazor-windows-ci-build
           path: \a\MauiBlazorTemplate\MauiBlazorTemplate\src\MauiBlazor.UI\MauiBlazor.UI.Mobile\bin\Release\net6.0-windows10.0.19041.0\win10-x64\publish\
-          # path: /bin/Release/net6.0-windows10.0.19041.0/win10-x64/AppPackages/MauiBlazor.UI.Mobile*/MauiBlazor.UI.Mobile*.msix
 
 # MAUI iOS Build
   build-ios:
@@ -110,8 +109,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-ios-ci-build
-          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
-          # path: /bin/Release/net6.0-ios/iossimulator-x64/*.app
+          path: \a\MauiBlazorTemplate\MauiBlazorTemplate\src\MauiBlazor.UI\MauiBlazor.UI.Mobile\bin\Release\net6.0-ios\iossimulator-x64\*.app
 
 # MAUI MacCatalyst Build
   build-mac:
@@ -143,5 +141,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-macos-ci-build
-          path: /src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
-          # path: /bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/
+          path: \a\MauiBlazorTemplate\MauiBlazorTemplate\src\MauiBlazor.UI\MauiBlazor.UI.Mobile\bin\Release\net6.0-maccatalyst/maccatalyst-x64/publish/
