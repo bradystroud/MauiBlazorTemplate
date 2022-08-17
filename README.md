@@ -1,4 +1,6 @@
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
+[![UI.Web Build and deploy](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webui.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webui.yml)
+[![Api Build and deploy](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webapi.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webapi.yml)
 
 # Maui + Blazor Solution Template
 Template for MAUI Blazor Applications.
