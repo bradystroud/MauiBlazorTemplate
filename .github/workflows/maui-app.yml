@@ -45,8 +45,6 @@ jobs:
         with:
           name: mauiblazor-android-ci-build
           path: /a/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-android/publish
-          
-# To test what we are working with
 
 # MAUI Windows Build
   build-windows:
