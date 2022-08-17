@@ -108,7 +108,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-ios-ci-build
-          path: /bin/Release/net6.0-ios/iossimulator-x64/**/*.app
+          path: /bin/Release/net6.0-ios/iossimulator-x64/*.app
 
 # MAUI MacCatalyst Build
   build-mac:
