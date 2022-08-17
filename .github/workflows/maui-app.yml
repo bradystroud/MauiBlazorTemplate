@@ -44,8 +44,8 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
           name: mauiblazor-android-ci-build
-          path: /bin/Release/net6.0-android/*Signed.a*
-
+          path: /
+# To test what we are working with
 # MAUI Windows Build
   build-windows:
     runs-on: windows-2022
