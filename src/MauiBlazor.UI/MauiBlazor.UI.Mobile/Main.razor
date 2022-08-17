@@ -1,5 +1,4 @@
-﻿@using UI.Core.Shared
-<Router AppAssembly="@typeof(Main).Assembly" AdditionalAssemblies="new[] {typeof(UI.Core.Shared.MainLayout).Assembly}">
+﻿<Router AppAssembly="@typeof(Main).Assembly" AdditionalAssemblies="new[] {typeof(MainLayout).Assembly}">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="h1"/>

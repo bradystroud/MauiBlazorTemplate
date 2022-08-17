@@ -7,13 +7,13 @@ namespace MauiBlazor.UI.Core.Pages;
 public partial class FetchData
 {
     [Inject]
-    public IWeatherForecastClient Client { get; set; }
+    public IWeatherForecastClient Client { get; set; } = default!;
 
-    private List<WeatherForecast>? forecasts;
+    private List<WeatherForecast>? _forecasts;
 
     protected override async Task OnInitializedAsync()
     {
         var result = await Client.GetAsync();
-        forecasts = result.ToList();
+        _forecasts = result.ToList();
     }
 }
