@@ -1,7 +1,7 @@
 [![Gitmoji](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://gitmoji.dev)
-[![Build and deploy - Blazor](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webui.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webui.yml)
+[![Build and deploy - Blazor](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-blazor.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-blazor.yml)
 [![Build and deploy - API](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webapi.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/deploy-webapi.yml)
-[![Build - MAUI apps](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/maui-app.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/maui-app.yml)
+[![Build - MAUI apps](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/build-maui.yml/badge.svg?branch=main)](https://github.com/bradystroud/MauiBlazorTemplate/actions/workflows/build-maui.yml)
 
 # Maui + Blazor Solution Template
 Template for MAUI Blazor Applications.
