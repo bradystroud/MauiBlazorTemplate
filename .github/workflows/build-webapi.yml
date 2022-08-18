@@ -1,4 +1,4 @@
-name: Build WebApi site
+name: Build - WebApi
 
 on:
   pull_request:

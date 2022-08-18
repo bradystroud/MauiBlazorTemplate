@@ -1,4 +1,4 @@
-name: Build Blazor site
+name: Build - Blazor
 
 on:
   pull_request:
