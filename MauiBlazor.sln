@@ -14,6 +14,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.UI.Mobile", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiBlazor.Shared", "src\MauiBlazor.Shared\MauiBlazor.Shared.csproj", "{5062E69C-8651-4582-81BD-D26E3BCE2430}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C95AEFE-96FE-48B9-9471-80CE5338BABD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		.editorconfig = .editorconfig
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+		.github\FUNDING.yml = .github\FUNDING.yml
+		global.json = global.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
