@@ -22,6 +22,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 		.github\FUNDING.yml = .github\FUNDING.yml
 		global.json = global.json
+		.github\workflows\build-webapi.yml = .github\workflows\build-webapi.yml
+		.github\workflows\build-blazor.yml = .github\workflows\build-blazor.yml
+		.github\workflows\deploy-blazor.yml = .github\workflows\deploy-blazor.yml
+		.github\workflows\deploy-webapi.yml = .github\workflows\deploy-webapi.yml
+		.github\workflows\build-maui.yml = .github\workflows\build-maui.yml
+		.github\ISSUE_TEMPLATE\--.md = .github\ISSUE_TEMPLATE\--.md
+		.github\ISSUE_TEMPLATE\---bug-report.md = .github\ISSUE_TEMPLATE\---bug-report.md
+		.github\ISSUE_TEMPLATE\--feature-request.md = .github\ISSUE_TEMPLATE\--feature-request.md
 	EndProjectSection
 EndProject
 Global

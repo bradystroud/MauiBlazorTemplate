@@ -139,11 +139,11 @@ jobs:
         run: dotnet restore
 
       - name: Build MAUI MacCatalyst
-        run: dotnet publish -c Release -f net7.0-maccatalyst --no-restore -p:BuildIpa=True
+        run: dotnet publish -f:net7.0-maccatalyst -c:Release --no-restore
 
       - name: Upload MacCatalyst Artifact
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-macos-ci-build
-          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/
+          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net7.0-maccatalyst/maccatalyst-x64/publish/
