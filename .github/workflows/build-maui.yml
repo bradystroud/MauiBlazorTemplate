@@ -28,10 +28,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup .NET 6
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
           
       - name: Install MAUI Workload
         run: dotnet workload install maui --ignore-failed-sources
@@ -40,14 +40,14 @@ jobs:
         run: dotnet restore
 
       - name: Build MAUI Android
-        run: dotnet publish -c Release -f net6.0-android --no-restore
+        run: dotnet publish -c Release -f net7.0-android --no-restore
 
       - name: Upload Android Artifact
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3.1.0
         with:
           name: mauiblazor-android-ci-build
-          path: /a/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-android/publish
+          path: /a/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net7.0-android/publish
 
 # MAUI Windows Build
   build-windows:
@@ -61,10 +61,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup .NET 6
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
 
       - name: Install MAUI Workload
         run: dotnet workload install maui --ignore-failed-sources
@@ -73,14 +73,14 @@ jobs:
         run: dotnet restore
 
       - name: Build MAUI Windows
-        run: dotnet publish -c Release -f net6.0-windows10.0.19041.0 --no-restore
+        run: dotnet publish -c Release -f net7.0-windows10.0.19041.0 --no-restore
 
       - name: Upload Windows Artifact
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-windows-ci-build
-          path: \a\MauiBlazorTemplate\MauiBlazorTemplate\src\MauiBlazor.UI\MauiBlazor.UI.Mobile\bin\Release\net6.0-windows10.0.19041.0\win10-x64\publish\
+          path: \a\MauiBlazorTemplate\MauiBlazorTemplate\src\MauiBlazor.UI\MauiBlazor.UI.Mobile\bin\Release\net7.0-windows10.0.19041.0\win10-x64\publish\
 
 # MAUI iOS Build
   build-ios:
@@ -94,10 +94,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup .NET 6
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
 
       - name: Install MAUI Workload
         run: dotnet workload install maui --ignore-failed-sources
@@ -106,14 +106,14 @@ jobs:
         run: dotnet restore
 
       - name: Build MAUI iOS
-        run: dotnet build -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
+        run: dotnet build -c Release -f net7.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
 
       - name: Upload iOS Artifact
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-ios-ci-build
-          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-ios/iossimulator-x64/*.app
+          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net7.0-ios/iossimulator-x64/*.app
 
 # MAUI MacCatalyst Build
   build-mac:
@@ -127,10 +127,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Setup .NET 6
+      - name: Setup .NET
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 7.0.x
 
       - name: Install MAUI Workload
         run: dotnet workload install maui --ignore-failed-sources
@@ -139,11 +139,11 @@ jobs:
         run: dotnet restore
 
       - name: Build MAUI MacCatalyst
-        run: dotnet publish -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
+        run: dotnet publish -f:net7.0-maccatalyst -c:Release --no-restore
 
       - name: Upload MacCatalyst Artifact
         if: ${{ github.event_name == 'push' }}
         uses: actions/upload-artifact@v3
         with:
           name: mauiblazor-macos-ci-build
-          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net6.0-maccatalyst/maccatalyst-x64/publish/
+          path: /Users/runner/work/MauiBlazorTemplate/MauiBlazorTemplate/src/MauiBlazor.UI/MauiBlazor.UI.Mobile/bin/Release/net7.0-maccatalyst/maccatalyst-x64/publish/
