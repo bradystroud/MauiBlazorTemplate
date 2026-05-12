@@ -12,7 +12,7 @@
 
 A pragmatic starting point for an app that runs on **web, mobile, and desktop** from a single Razor component library — backed by an ASP.NET Core Web API.
 
-> 💡 **Official alternative:** Since .NET 9, Microsoft ships a first-party template that does the same thing. Run `dotnet new maui-blazor-web` to scaffold it — see the [Microsoft Learn tutorial](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app). This repo predates that template and keeps a slightly different shape (separate Web API project + NSwag client generation) that some projects still prefer.
+> 🏆 **A bit of history:** For years there was no official Microsoft template for sharing UI across MAUI and Blazor Web — this repo filled the gap and was the go-to starting point. Microsoft finally caught up in **.NET 9** with the first-party [`dotnet new maui-blazor-web`](https://learn.microsoft.com/en-us/aspnet/core/blazor/hybrid/tutorials/maui-blazor-web-app) template, which is a great choice for greenfield projects. This template still differs in shape (separate ASP.NET Core Web API project + NSwag-generated typed client) and remains useful when you want that split out of the box.
 
 ## 🏛 Solution structure
 
