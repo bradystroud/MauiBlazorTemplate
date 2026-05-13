@@ -80,6 +80,9 @@ jobs:
   build-ios:
     runs-on: macos-15
     name: iOS Build
+    # TODO: .NET 10 MAUI workload requires Xcode 26.4 — macos-15 only ships up to 26.3 today.
+    # Re-enable as a required job once GitHub-hosted runners pick up Xcode 26.4.
+    continue-on-error: true
     defaults:
       run:
         working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
@@ -115,6 +118,9 @@ jobs:
   build-mac:
     runs-on: macos-15
     name: MacCatalyst Build
+    # TODO: .NET 10 MAUI workload requires Xcode 26.4 — macos-15 only ships up to 26.3 today.
+    # Re-enable as a required job once GitHub-hosted runners pick up Xcode 26.4.
+    continue-on-error: true
     defaults:
       run:
         working-directory: ./src/MauiBlazor.UI/MauiBlazor.UI.Mobile/
