@@ -17,7 +17,7 @@ app.UseCors(options =>
 });
 
 app.UseOpenApi();
-app.UseSwaggerUi3(settings => settings.DocumentPath = "/api/v1/specification.json");
+app.UseSwaggerUi(settings => settings.DocumentPath = "/api/v1/specification.json");
 
 // Configure the HTTP request pipeline.
 
